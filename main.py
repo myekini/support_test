@@ -17,9 +17,9 @@ dp = Dispatcher(support_bot)
 
 
 
-button1 = KeyboardButton("Hello")
-button2 = KeyboardButton("Youtube")
-keyboard  = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).row(button1, button2)
+button1 = InlineKeyboardButton("Hello")
+button2 = InlineKeyboardButton("Youtube")
+keyboard  = InlineKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).row(button1, button2)
 # start and help commands 
 @dp.message_handler(commands=['start', 'help'])
 async def send_welcome(message: types.Message):
