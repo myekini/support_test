@@ -39,7 +39,9 @@ keyboard2 = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).ro
 @dp.message_handler(commands=['info'])
 async def info_message(message: types.Message):
     await message.reply('Say something about you!', reply_markup=keyboard2)
-    
+
+
+   
 #Random command
 button5 = InlineKeyboardButton(text="Random 1-10", callback_data="randomvalue_of10")
 button6 = InlineKeyboardButton(text="Random 1-100", callback_data="randomvalue_of100")
@@ -84,13 +86,6 @@ async def qr(message: types.Message):
     await support_bot.send_photo(chat_id=message.chat.id, photo=open('code.png', 'rb'))    
 
     
-    
-
-    
-
-
-
-
 
 
 
